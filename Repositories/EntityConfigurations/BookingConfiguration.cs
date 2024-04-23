@@ -23,9 +23,9 @@ namespace Repositories.EntityConfigurations
             builder.Property(x => x.BookingStatuses)
                 .IsRequired();
 
-            builder.HasOne(x => x.Car)
-                .WithMany(x => x.Bookings)
-                .HasForeignKey(x => x.CarId);
+            builder.HasMany(x => x.CarBookings)
+                .WithOne(x => x.Booking)
+                .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

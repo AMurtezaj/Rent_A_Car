@@ -12,7 +12,7 @@ namespace Data.Entities
         public int? OfferId { get; set; }
         public int? CartId { get; set; }
         public int Quantity { get; set; }
-        public virtual Offer Offer { get; set; }
-        public virtual Cart Cart { get; set; }
+        public Offer Offer { get; set; }
+        public Cart Cart { get; set; }
     }
 }

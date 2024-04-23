@@ -15,7 +15,7 @@
         public string Description { get; set; }
         public string Image { get; set; }
         public IList<Review> Reviews { get; set; }
-        public IList<Booking> Bookings { get; set; }
+        public IList<CarBooking> CarBookings { get; set; }
         public IList<InsuranceOption> InsuranceOptions { get; set; }
         public IList<Offer> Offers { get; set; }
 

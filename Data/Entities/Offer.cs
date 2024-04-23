@@ -19,5 +19,7 @@ namespace Data.Entities
         public DateTime EndDate { get; set; }
         public int CarId { get; set; }
         public Car Car { get; set; }
+        public IList<BookingOffer> BookingOffers { get; set; }
+        public IList<CartOffer> CartOffers { get; set; }
     }
 }

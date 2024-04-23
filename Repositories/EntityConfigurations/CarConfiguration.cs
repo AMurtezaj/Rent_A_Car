@@ -28,9 +28,8 @@ namespace Repositories.EntityConfigurations
                 .HasForeignKey(x => x.CarId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany(x => x.Bookings)
+            builder.HasMany(x => x.CarBookings)
                 .WithOne(x => x.Car)
-                .HasForeignKey(x => x.CarId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.InsuranceOptions)

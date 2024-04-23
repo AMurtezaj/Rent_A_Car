@@ -11,7 +11,9 @@ namespace Data.Entities
         public BookingStatus BookingStatuses { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public int CarId { get; set; }
-        public Car Car { get; set; }
+        public IList<Car> Cars { get; set; }
+        public IList<BookingOffer> BookingOffers { get; set; }
+        public IList<CarBooking> CarBookings { get; set; }
+
     }
 }

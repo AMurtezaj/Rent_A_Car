@@ -32,6 +32,9 @@ namespace Repositories.EntityConfigurations
                 .HasForeignKey(e => e.CarId)
                 .IsRequired();
 
+            builder.HasMany(x => x.CartOffers)
+                .WithOne(x => x.Offer)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
