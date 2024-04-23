@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure.Storage.Blobs.Models;
+using Business.Services.Mailing;
 using Business.Services.Token;
 using Data.Authentication;
 using Data.DTOs.UserDtos;
@@ -22,13 +23,15 @@ namespace Business.Services.UserServices
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly ITokenService _tokenService;
+        private readonly IMailService _mailService;
         
 
-        public UserService(IUserRepository userRepository, IMapper mapper, ITokenService tokenService)
+        public UserService(IUserRepository userRepository, IMapper mapper, ITokenService tokenService, IMailService mailService)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _tokenService = tokenService;
+            _mailService = mailService;
         }
 
         public ApiResponse<IList<UserDto>> GetAll()

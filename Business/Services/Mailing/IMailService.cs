@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business.Services.Mailing
 {
-    public interface IMailService
+    public interface IMailService 
     {
         Task SendEmailAsync(MailRequest mailRequest);
         Task SendForgotPasswordEmail(User user, string token);
